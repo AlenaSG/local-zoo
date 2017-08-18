@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
     <h3>{{currentAnimals}}</h3>
 
     <ul>
-       <li>{{firstAnimal.name}}</li>
+       <li *ngFor="let currentAnimal of animals">{{currentAnimal.species}}</li>
      </ul>
   </div>
   `
@@ -16,10 +16,13 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 currentAnimals: string = 'See these animals today!';
-firstAnimal: Animal = new Animal ("Tiger");
+animals: Animal[] = [
+  new Animal ('Tiger'),
+  new Animal ('Giraffe'),
+  new Animal ('Crocodile')
+];
 }
 
 export class Animal {
-  public done: boolean = false;
-  constructor(public name: string) { }
+  constructor(public species: string) { }
 }
