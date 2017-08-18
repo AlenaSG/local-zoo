@@ -16,7 +16,10 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 currentAnimals: string = 'See these animals today!';
-firstAnimal = {
-  name: "Tiger"
+firstAnimal: Animal = new Animal ("Tiger");
 }
+
+export class Animal {
+  public done: boolean = false;
+  constructor(public name: string) { }
 }
