@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
     <h3>{{currentAnimals}}</h3>
 
     <ul>
-       <li *ngFor="let currentAnimal of animals">{{currentAnimal.species}}</li>
+       <li *ngFor="let currentAnimal of animals">{{currentAnimal.species}} <button (click)="editAnimal()">Edit!</button></li>
      </ul>
   </div>
   `
@@ -21,6 +21,10 @@ animals: Animal[] = [
   new Animal ('Giraffe'),
   new Animal ('Crocodile')
 ];
+
+editAnimal() {
+  alert("Edit animal?");
+}
 }
 
 export class Animal {
