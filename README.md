@@ -7,8 +7,7 @@ by Alena Golovina, 08.18.2017
 An Angular2 app for a local Zoo to track animals (eg.the animals' likes and dislikes, or how many caretakers each requires).
 
 ## Known Bugs
-* Save new animal stopped working
-* Filtering by maturity does not work
+* No known bugs
 
 ## Animal Model
 ---------
@@ -46,7 +45,7 @@ Users (zoo staff), should be able to add newly-admitted animals to the app.
 
 ## Set Up Instructions
 * Clone this repository from GitHub
-* Run npm install
+* Run npm install, bower install
 * Run gulp build, and gulp serve in the Terminal
 
 ## License
