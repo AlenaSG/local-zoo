@@ -12,27 +12,7 @@ import { Animal } from './animal.model';
 
      <hr>
 
-     <div>
-     <div *ngIf="selectedAnimal">
-          <h3>{{selectedAnimal.name}} the {{selectedAnimal.species}}</h3>
-      <div>
-        <h3>Edit Animal</h3>
-        <div>
-          <label>Enter Animal Name:</label>
-          <input [(ngModel)]="selectedAnimal.name">
-        </div>
-        <div>
-          <label>Enter Animal Age:</label>
-          <input [(ngModel)]="selectedAnimal.age">
-        </div>
-        <div>
-          <label>Enter Animal Number of Caretakers:</label>
-          <input [(ngModel)]="selectedAnimal.caretakers">
-        </div>
-        <button (click)="finishedEditing()">Done</button>
-        </div>
-    </div>
-  </div>
+     <edit-animal [childSelectedAnimal]="selectedAnimal"  (doneButtonClickedSender)="finishedEditing()"></edit-animal>
   </div>
   `
 })
